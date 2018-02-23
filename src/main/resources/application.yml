@@ -1,0 +1,18 @@
+spring:
+  http:
+    multipart:
+      max-file-size: 128KB
+      max-request-size: 128KB
+  ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      port: 8389
+      base-dn: dc=springframework,dc=org
+
+application:
+  message: Hello cx
+
+logging:
+  level: debug
+  path: log/
+

@@ -3,12 +3,8 @@ spring:
     multipart:
       max-file-size: 128KB
       max-request-size: 128KB
-  ldap:
-    embedded:
-      ldif: classpath:test-server.ldif
-      port: 8389
-      base-dn: dc=springframework,dc=org
-
+  thymeleaf:
+    cache: false
 application:
   message: Hello cx
 

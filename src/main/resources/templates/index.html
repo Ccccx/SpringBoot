@@ -1,7 +1,10 @@
-<html >
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8"/>
 <body>
 <div>
     Welcome to the home page!
+    <h2><a href="index.html" th:href="@{/have}">有铅笔么？</a></h2>
+    <h2><a href="index.html" th:href="@{/path1/getCookies}">Cookies测试</a></h2>
 </div>
 </body>
 </html>

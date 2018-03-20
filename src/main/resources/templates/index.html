@@ -1,10 +1,16 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <meta charset="UTF-8"/>
 <body>
 <div>
-    Welcome to the home page!
+    <h1>Welcome to the home page!</h1>
     <h2><a href="index.html" th:href="@{/have}">有铅笔么？</a></h2>
     <h2><a href="index.html" th:href="@{/path1/getCookies}">Cookies测试</a></h2>
+    <h2><a href="index.html" th:href="@{/upload/}">上传文件</a></h2>
+    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
 </div>
 </body>
 </html>

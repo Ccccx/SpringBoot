@@ -2,6 +2,7 @@ package com.cx;
 
 import com.cx.bean.Quote;
 import com.cx.config.StorageProperties;
+import com.cx.config.WebSecurityConfig;
 import com.cx.service.StorageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -19,8 +22,9 @@ import org.springframework.web.client.RestTemplate;
  * @create 2018/1/12
  */
 @SpringBootApplication
+@ComponentScan("com.cx")
 @EnableScheduling
-@EnableConfigurationProperties(StorageProperties.class)
+@EnableConfigurationProperties(value={StorageProperties.class})
 public class CxApplication {
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 	public static void main(String[] args) {

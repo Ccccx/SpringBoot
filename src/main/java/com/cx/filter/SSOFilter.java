@@ -19,9 +19,9 @@ import java.net.URLDecoder;
  * @author CX
  * @create 2018/3/15
  */
-@Component
+/*@Component
 @ServletComponentScan
-@WebFilter(filterName = "SSOFilter",urlPatterns = "/*")
+@WebFilter(filterName = "SSOFilter",urlPatterns = "*//*")*/
 public class SSOFilter implements Filter {
     private static Logger log = LoggerFactory.getLogger(SSOFilter.class);
     private static String SSO_LOGIN_URL = "http://127.0.0.1:8080/sso/login?redirectUrl=";
